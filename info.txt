@@ -1,0 +1,52 @@
+Installation:
+npm install
+nodemon server.js or node server.js
+
+You need to start mongodb server
+
+
+ENDPOINTS: 
+=========================================================
+  PATH: /task/<Task ID>
+  METHOD: GET
+  Description: Get a task by Task ID
+==========================================================
+  PATH: /task/<Task ID>
+  METHOD: DELETE
+  Description: Delete a task
+==========================================================
+  PATH: /task/:id
+  METHOD: PUT
+  Description: Update a task
+  Request: {
+    "name": "new task 2",
+    "description": "New 2 task description",
+    "dueDate": "12-10-2020", // in MM-DD-YYYY format
+    "inProgress": false, // true or false
+    "status": "New" // New or Completed
+  }
+==========================================================
+  PATH: /task/completed
+  METHOD: GET
+  Description: get all tasks completed
+==========================================================
+  PATH: /task/inprogress
+  METHOD: GET
+  Description: get all tasks inProgress
+==========================================================
+  PATH: /task/save
+  METHOD: POST
+  Description: Save a task
+  Request: {
+    "name": "new task 2",
+    "description": "New 2 task description",
+    "dueDate": "12-10-2020", // in MM-DD-YYYY format
+    "inProgress": false, // true or false
+    "status": "New" // New or Completed
+  }
+==========================================================
+  PATH: /tasks
+  METHOD: GET
+  Description: To get all created tasks
+=========================================================
+
